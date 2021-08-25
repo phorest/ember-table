@@ -1,0 +1,84 @@
+/************************************************************************************************/
+/* Table default style */
+/************************************************************************************************/
+.ember-table {
+  border: solid 1px #dddddd;
+}
+
+.ember-table th,
+.ember-table td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 4px 10px;
+}
+
+.ember-table tbody td {
+  border-top: none;
+  border-left: none;
+  border-bottom: #dcdcdc 1px dotted;
+  border-right: #dcdcdc 1px solid;
+  background-color: #ffffff;
+}
+
+.ember-table tbody td:last-child {
+  border-right: none;
+}
+
+.ember-table tbody td.is-fixed-right {
+  border-left: solid 1px #dcdcdc;
+}
+
+.ember-table th,
+.ember-table tfoot td {
+  padding: 5px 0 3px;
+  background-color: #f8f8f8;
+  font-family: "Univers LT W01 65 Bold";
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ember-table tfoot td {
+  border-top: 1px solid #dcdcdc;
+  border-right: solid 1px #dcdcdc;
+}
+
+.ember-table tfoot td:last-child {
+  border-right: none;
+}
+
+.ember-table thead th {
+  border-bottom: 1px solid #dcdcdc;
+  border-right: solid 1px #dcdcdc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ember-table thead th:last-child {
+  border-right: none;
+}
+
+.ember-table thead th.is-fixed-right {
+  border-left: solid 1px #dcdcdc;
+}
+
+.ember-table thead th.is-fixed-right .et-header-resize-area {
+  left: 0;
+}
+
+.ember-table tr:hover th {
+  cursor: pointer;
+}
+
+.ember-table tr:hover td {
+  background-color: #e5edf8;
+}
+
+.ember-table tr.is-selected td,
+.ember-table tr.is-selected th {
+  background-color: #227ecb;
+}
