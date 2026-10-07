@@ -98,6 +98,8 @@ module.exports = async function() {
         },
       },
       {
+        // Not run in CI for now (R20-812): yuidoc paths need updating for the un-podded
+        // layout, to be revisited after the monorepo split.
         name: 'ember-default-docs',
         command: 'ember test --filter="Acceptance | docs"',
         npm: {
