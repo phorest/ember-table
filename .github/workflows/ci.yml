@@ -24,8 +24,11 @@ jobs:
         with:
           install: true
           cache: true
-      - name: Enable corepack
-        run: corepack enable
+      # The corepack bundled with Node 18.20.5 cannot verify npm's current signing keys
+      - name: Update and enable corepack
+        run: |
+          npm install --global corepack@latest
+          corepack enable
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -77,8 +80,11 @@ jobs:
         with:
           install: true
           cache: true
-      - name: Enable corepack
-        run: corepack enable
+      # The corepack bundled with Node 18.20.5 cannot verify npm's current signing keys
+      - name: Update and enable corepack
+        run: |
+          npm install --global corepack@latest
+          corepack enable
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
