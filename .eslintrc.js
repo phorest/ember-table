@@ -63,12 +63,10 @@ module.exports = {
         './.prettierrc.js',
         './.stylelintrc.js',
         './.template-lintrc.js',
-        './ember-cli-build.js',
-        './index.js',
-        './testem.js',
-        './blueprints/*/index.js',
-        './config/**/*.js',
-        './tests/dummy/config/**/*.js',
+        './addon/index.js',
+        './test-app/ember-cli-build.js',
+        './test-app/testem.js',
+        './test-app/config/**/*.js',
       ],
       parserOptions: {
         sourceType: 'script',
@@ -80,8 +78,17 @@ module.exports = {
       extends: ['plugin:n/recommended'],
     },
     {
+      // the test app is private, so the "published files" rules do not apply
+      files: ['test-app/**/*.js'],
+      rules: {
+        'node/no-unpublished-require': 'off',
+        'node/no-unpublished-import': 'off',
+        'node/no-unsupported-features': 'off',
+      },
+    },
+    {
       // test files
-      files: ['tests/**/*-test.{js,ts}'],
+      files: ['test-app/tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
     },
   ],
