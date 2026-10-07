@@ -52,6 +52,9 @@ importers:
       eslint-plugin-qunit:
         specifier: ^8.1.2
         version: 8.2.6(eslint@8.57.1)
+      prettier:
+        specifier: 1.18.2
+        version: 1.18.2
       sass-lint:
         specifier: ^1.13.1
         version: 1.13.1
