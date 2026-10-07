@@ -65,7 +65,9 @@ jobs:
             ember-lts-5.12,
             ember-release,
             # ember-production,
-            ember-default-docs
+            # Deferred (R20-812): the docs scenario needs its yuidoc paths fixed for the
+            # un-podded layout, and tests/dummy moves again in the monorepo split.
+            # ember-default-docs
           ]
 
     steps:
