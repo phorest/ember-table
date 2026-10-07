@@ -1,0 +1,62 @@
+{
+  "name": "test-app",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Test and docs app for ember-table",
+  "scripts": {
+    "build": "ember build",
+    "start": "ember serve",
+    "test": "ember test",
+    "test:ember-compatibility": "ember try:one",
+    "docs:deploy": "ember try:one ember-default-docs --- ember deploy production"
+  },
+  "devDependencies": {
+    "@addepar/style-toolbox": "~0.8.1",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.13",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
+    "@babel/plugin-proposal-optional-catch-binding": "^7.12.13",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.13",
+    "@babel/plugin-transform-class-static-block": "^7.29.7",
+    "@ember/optional-features": "^2.0.0",
+    "@ember/string": "^3.0.0",
+    "@ember/test-helpers": "^5.2.2",
+    "@embroider/test-setup": "^4.0.0",
+    "@glimmer/component": "^1.1.2",
+    "broccoli-asset-rev": "^3.0.0",
+    "ember-a11y-testing": "^7.1.2",
+    "ember-auto-import": "^2.4.2",
+    "ember-cli": "~3.28.0",
+    "ember-cli-babel": "^7.12.0",
+    "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-htmlbars": "^6.0.0",
+    "ember-cli-inject-live-reload": "^2.0.1",
+    "ember-cli-sass": "^10.0.0",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-terser": "^4.0.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
+    "ember-faker": "^1.5.0",
+    "ember-load-initializers": "^2.0.0",
+    "ember-math-helpers": "~2.11.3",
+    "ember-qunit": "^9.0.3",
+    "ember-radio-button": "^2.0.0",
+    "ember-resolver": "^8.0.2",
+    "ember-source": "~3.28.0",
+    "ember-table": "workspace:*",
+    "ember-truth-helpers": "^3.0.0",
+    "ember-try": "^4.0.0",
+    "latest-version": "^9.0.0",
+    "loader.js": "^4.2.3",
+    "qunit": "^2.24.1",
+    "qunit-dom": "^3.4.0",
+    "sass": "^1.26.10",
+    "webpack": "^5.0.0"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "ember": {
+    "edition": "octane"
+  }
+}

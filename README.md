@@ -36,7 +36,7 @@ ember install ember-table
 Documentation is available at: https://opensource.addepar.com/ember-table/docs
 
 Ember Table uses [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs) for its documentation.
-To run the docs locally, clone the repo, run `yarn && yarn start` and then navigate to `http://localhost:4200/docs`.
+To run the docs locally, clone the repo, run `pnpm install && pnpm start` and then navigate to `http://localhost:4200/docs`.
 
 ## Usage
 
@@ -235,7 +235,7 @@ one table at at time. The recommended migration steps are as follows (if you are
 ### Releasing new versions (for maintainers)
 
 We use [`release-it`](https://github.com/release-it/release-it).
-To create a new release, run `yarn run release`. To do a dry-run: `yarn run release --dry-run`.
+To create a new release, run `pnpm release`. To do a dry-run: `pnpm release --dry-run`.
 The tool will prompt you to select the new release version.
 
 **You must be a member of the @Addepar/web-core team on GitHub to bypass master
