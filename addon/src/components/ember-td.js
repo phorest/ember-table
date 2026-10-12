@@ -2,6 +2,7 @@ import { computed, action } from '@ember/object';
 import { alias, readOnly } from '@ember/object/computed';
 
 import BaseTableCell from './-private/base-table-cell';
+import EmberTableSimpleCheckbox from './ember-table-simple-checkbox';
 import { SELECT_MODE } from '../-private/collapse-tree';
 
 let setupSimpleCheckboxForTest = false;
@@ -39,6 +40,8 @@ export function setSimpleCheckboxForTest(bool) {
  @public
  */
 export default BaseTableCell.extend({
+  EmberTableSimpleCheckbox,
+
   tagName: 'td',
 
   init() {

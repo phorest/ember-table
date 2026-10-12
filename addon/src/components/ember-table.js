@@ -7,6 +7,9 @@ import {
   teardownTableStickyPolyfill,
 } from '../-private/sticky/table-sticky-polyfill';
 
+import '../styles/addon.css';
+
+import ScrollIndicators from './-private/scroll-indicators';
 import EmberTableLoadingMore from './ember-table-loading-more';
 import EmberTbody from './ember-tbody';
 import EmberTfoot from './ember-tfoot';
@@ -43,6 +46,7 @@ export default Component.extend({
   EmberTbody,
   EmberTfoot,
   EmberThead,
+  ScrollIndicators,
 
   didInsertElement() {
     this._super(...arguments);

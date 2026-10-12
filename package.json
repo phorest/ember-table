@@ -4,10 +4,11 @@
   "description": "Workspace for the ember-table addon and its test app",
   "packageManager": "pnpm@10.26.0",
   "scripts": {
-    "build": "pnpm --filter test-app build",
-    "start": "pnpm --filter test-app start",
-    "test": "pnpm --filter test-app test",
-    "test:ember-compatibility": "pnpm --filter test-app test:ember-compatibility",
+    "build:addon": "pnpm --filter ember-table build && pnpm install --offline --frozen-lockfile",
+    "build": "pnpm build:addon && pnpm --filter test-app build",
+    "start": "pnpm build:addon && concurrently \"pnpm --filter ember-table start\" \"pnpm --filter test-app start\" --names \"addon,test-app\"",
+    "test": "pnpm build:addon && pnpm --filter test-app test",
+    "test:ember-compatibility": "pnpm build:addon && pnpm --filter test-app test:ember-compatibility",
     "docs:deploy": "pnpm --filter test-app docs:deploy",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:files": "ls-lint",
@@ -15,7 +16,7 @@
     "lint:js:fix": "eslint . --fix",
     "lint:sass": "concurrently \"pnpm:lint:sass:*\"",
     "lint:sass:sass-lint": "sass-lint -c .sass-lint.yml --verbose --no-exit",
-    "lint:sass:prettier": "prettier --list-different 'addon/addon/styles/**/*.scss' 'test-app/app/styles/**/*.scss'",
+    "lint:sass:prettier": "prettier --list-different 'addon/src/styles/**/*.scss' 'test-app/app/styles/**/*.scss'",
     "release": "pnpm --filter ember-table release"
   },
   "devDependencies": {

@@ -53,6 +53,11 @@
     "sass": "^1.26.10",
     "webpack": "^5.0.0"
   },
+  "dependenciesMeta": {
+    "ember-table": {
+      "injected": true
+    }
+  },
   "engines": {
     "node": ">= 18"
   },
