@@ -6,10 +6,10 @@
   <table>
     {{yield (hash
       api=this.api
-      head=(component "ember-thead" api=this.api)
-      body=(component "ember-tbody" api=this.api)
-      foot=(component "ember-tfoot" api=this.api)
-      loadingMore=(component "ember-table-loading-more" api=this.api)
+      head=(component (ensure-safe-component this.EmberThead) api=this.api)
+      body=(component (ensure-safe-component this.EmberTbody) api=this.api)
+      foot=(component (ensure-safe-component this.EmberTfoot) api=this.api)
+      loadingMore=(component (ensure-safe-component this.EmberTableLoadingMore) api=this.api)
     )}}
   </table>
 </div>

@@ -1,7 +1,7 @@
-/* global ResizeSensor */
 import Component from '@ember/component';
 import { or, readOnly } from '@ember/object/computed';
 import { next, schedule, scheduleOnce } from '@ember/runloop';
+import ResizeSensor from 'css-element-queries/src/ResizeSensor';
 
 /**
   Renders a custom loading indicator beneath the table body. Can be used to

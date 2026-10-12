@@ -5,7 +5,7 @@
       isHeader=api.isHeader
       rowsCount=api.rowsCount
 
-      row=(component "ember-tr" api=api)
+      row=(component (ensure-safe-component this.EmberTr) api=api)
     )}}
   {{else}}
     <EmberTr @api={{api}} />

@@ -1,10 +1,10 @@
-/* global ResizeSensor */
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { readOnly } from '@ember/object/computed';
 import { bind, scheduleOnce } from '@ember/runloop';
 import { htmlSafe } from '@ember/template';
 import { isEmpty, isNone } from '@ember/utils';
+import ResizeSensor from 'css-element-queries/src/ResizeSensor';
 
 import { addObserver } from '../../-private/utils/observer';
 
