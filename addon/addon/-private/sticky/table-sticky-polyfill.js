@@ -1,6 +1,7 @@
+import ResizeSensor from 'css-element-queries/src/ResizeSensor';
+
 import { getScale } from '../utils/element';
 
-/* global ResizeSensor */
 /* eslint-disable ember/no-observers */
 
 const TABLE_POLYFILL_MAP = new WeakMap();

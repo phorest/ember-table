@@ -5,6 +5,9 @@ import { readOnly } from '@ember/object/computed';
 import { SELECT_MODE } from '../-private/collapse-tree';
 import { closest } from '../-private/utils/element';
 
+import EmberTd from './ember-td';
+import EmberTh from './ember-th';
+
 /**
   The table row component. This component manages row level concerns, and yields
   an API object that contains the cell component, the cell/column/row values,
@@ -44,6 +47,9 @@ import { closest } from '../-private/utils/element';
 */
 export default Component.extend({
   tagName: 'tr',
+
+  EmberTd,
+  EmberTh,
   classNames: ['et-tr'],
   classNameBindings: ['isEven:is-even:is-odd', 'isGroupSelected', 'isSelectable', 'isSelected'],
 

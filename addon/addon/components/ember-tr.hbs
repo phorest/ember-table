@@ -11,7 +11,7 @@
         rowMeta=api.rowMeta
         rowsCount=api.rowsCount
 
-        cell=(component "ember-th" api=api)
+        cell=(component (ensure-safe-component this.EmberTh) api=api)
       )}}
     {{else}}
       {{yield (hash
@@ -28,7 +28,7 @@
 
         rowsCount=api.rowsCount
 
-        cell=(component "ember-td" api=api)
+        cell=(component (ensure-safe-component this.EmberTd) api=api)
       )}}
     {{/if}}
   {{else if this.isHeader}}

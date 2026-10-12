@@ -1,4 +1,3 @@
-/* global ResizeSensor */
 import { A as emberA } from '@ember/array';
 import Component from '@ember/component';
 import { assert } from '@ember/debug';
@@ -6,6 +5,7 @@ import EmberObject, { computed, get } from '@ember/object';
 import { and, notEmpty, or } from '@ember/object/computed';
 import { bind, scheduleOnce } from '@ember/runloop';
 import { isPresent } from '@ember/utils';
+import ResizeSensor from 'css-element-queries/src/ResizeSensor';
 
 import MetaCache from '../-private/meta-cache';
 import defaultTo from '../-private/utils/default-to';
@@ -14,6 +14,8 @@ import { addObserver } from '../-private/utils/observer';
 import { sortMultiple, compareValues } from '../-private/utils/sort';
 
 import ColumnTree, { RESIZE_MODE, FILL_MODE, WIDTH_CONSTRAINT } from '../-private/column-tree';
+
+import EmberTr from './ember-tr';
 
 let isTestingThead = false;
 export function setupTHeadForTest(bool) {
@@ -43,6 +45,8 @@ export function setupTHeadForTest(bool) {
 
 export default Component.extend({
   tagName: 'thead',
+
+  EmberTr,
 
   /**
     The API object passed in by the table

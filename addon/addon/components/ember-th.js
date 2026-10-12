@@ -1,7 +1,7 @@
-/* global Hammer */
 import { next } from '@ember/runloop';
 import { get, action } from '@ember/object';
 import { readOnly } from '@ember/object/computed';
+import Hammer from 'hammerjs';
 
 import BaseTableCell from './-private/base-table-cell';
 import { closest } from '../-private/utils/element';

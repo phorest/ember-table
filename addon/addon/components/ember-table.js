@@ -7,6 +7,11 @@ import {
   teardownTableStickyPolyfill,
 } from '../-private/sticky/table-sticky-polyfill';
 
+import EmberTableLoadingMore from './ember-table-loading-more';
+import EmberTbody from './ember-tbody';
+import EmberTfoot from './ember-tfoot';
+import EmberThead from './ember-thead';
+
 /**
   The primary Ember Table component. This component represents the root of the
   table, and manages high level state of all of its subcomponents. It does not
@@ -32,6 +37,12 @@ export default Component.extend({
   classNames: ['ember-table'],
   attributeBindings: ['dataTestEmberTable:data-test-ember-table'],
   dataTestEmberTable: true,
+
+  // Referenced from the template via ensure-safe-component so Embroider can analyze them
+  EmberTableLoadingMore,
+  EmberTbody,
+  EmberTfoot,
+  EmberThead,
 
   didInsertElement() {
     this._super(...arguments);

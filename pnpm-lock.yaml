@@ -85,6 +85,9 @@ importers:
       '@ember/test-helpers':
         specifier: '>= 2.9.4'
         version: 5.7.0(@babel/core@7.29.7)
+      '@embroider/util':
+        specifier: ^1.13.2
+        version: 1.13.5(ember-source@3.28.12(@babel/core@7.29.7))
       '@html-next/vertical-collection':
         specifier: ^5.0.0
         version: 5.0.5
@@ -103,12 +106,6 @@ importers:
       ember-cli-htmlbars:
         specifier: ^6.0.0
         version: 6.3.0
-      ember-cli-node-assets:
-        specifier: ^0.2.2
-        version: 0.2.2
-      ember-cli-version-checker:
-        specifier: ^5.1.2
-        version: 5.1.2
       ember-raf-scheduler:
         specifier: ^0.5.0
         version: 0.5.2
@@ -989,6 +986,19 @@ packages:
       '@embroider/core':
         optional: true
       '@embroider/webpack':
+        optional: true
+
+  '@embroider/util@1.13.5':
+    resolution: {integrity: sha512-rHhGUzAQ5iOr5Swvk7yaarVe5SJtcjK2t/C8ts9agWfhTq4DVfy8+axF0KOf1jALRiJao3l9ALRGd6letKw2ZQ==}
+    engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@glint/environment-ember-loose': ^1.0.0
+      '@glint/template': ^1.0.0
+      ember-source: '*'
+    peerDependenciesMeta:
+      '@glint/environment-ember-loose':
+        optional: true
+      '@glint/template':
         optional: true
 
   '@eslint-community/eslint-utils@4.10.1':
@@ -8320,6 +8330,15 @@ snapshots:
     dependencies:
       lodash: 4.18.1
       resolve: 1.22.13
+
+  '@embroider/util@1.13.5(ember-source@3.28.12(@babel/core@7.29.7))':
+    dependencies:
+      '@embroider/macros': 1.21.3
+      broccoli-funnel: 3.0.8
+      ember-cli-babel: 7.26.11
+      ember-source: 3.28.12(@babel/core@7.29.7)
+    transitivePeerDependencies:
+      - supports-color
 
   '@eslint-community/eslint-utils@4.10.1(eslint@8.57.1)':
     dependencies:
