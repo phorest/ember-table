@@ -126,7 +126,7 @@ you like):
 ```
 
 The rendered table is a plain table without any styling. You can define styling for your own table.
-If you want to use default table style, import the `ember-table/default` SASS file.
+If you want to use default table style, import the `ember-table/default.scss` SASS file.
 
 ### Optional Footer
 
@@ -240,6 +240,24 @@ The tool will prompt you to select the new release version.
 
 **You must be a member of the @Addepar/web-core team on GitHub to bypass master
 branch protection.**
+
+### Releasing a Phorest tag
+
+ember-table is a v2 addon, so consumers need the built `addon/dist`. It is gitignored, and we do not build
+on install (pnpm builds git dependencies in a hidden temp directory, which breaks the CSS handling, and the
+consuming app would have to allowlist every release). Instead a tag points at a commit that includes `dist`:
+
+```
+scripts/tag-release.sh v6.0.0-phorest.3
+git push origin v6.0.0-phorest.3
+```
+
+The script builds the addon, commits `addon/dist` on a detached commit that is not on any branch, and tags it.
+Consumers install it from the `addon` subfolder:
+
+```json
+"ember-table": "github:phorest/ember-table#v6.0.0-phorest.3&path:/addon"
+```
 
 ### Generating documentation.
 

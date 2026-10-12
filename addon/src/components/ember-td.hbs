@@ -5,7 +5,7 @@
         class="et-toggle-select {{unless this.shouldShowCheckbox 'et-speech-only'}}"
         data-test-select-row-container
       >
-        <EmberTableSimpleCheckbox
+        <this.EmberTableSimpleCheckbox
           @checked={{this.rowMeta.isGroupSelected}}
           @onClick={{this.onSelectionToggled}}
           @ariaLabel="Select row"
@@ -17,7 +17,7 @@
 
     {{#if this.canCollapse}}
       <span class="et-toggle-collapse et-depth-indent {{this.depthClass}}">
-        <EmberTableSimpleCheckbox
+        <this.EmberTableSimpleCheckbox
           @checked={{this.rowMeta.isCollapsed}}
           @onChange={{this.onCollapseToggled}}
           @ariaLabel="Collapse row"

@@ -9,6 +9,7 @@ import CollapseTree, { SELECT_MODE } from '../-private/collapse-tree';
 import defaultTo from '../-private/utils/default-to';
 import { observer } from '../-private/utils/observer';
 
+import RowWrapper from './-private/row-wrapper';
 import EmberTr from './ember-tr';
 
 let setupRowCountForTest = false;
@@ -44,6 +45,7 @@ export default Component.extend({
   tagName: 'tbody',
 
   EmberTr,
+  RowWrapper,
   VerticalCollection,
 
   /**

@@ -4,6 +4,8 @@ import { readOnly } from '@ember/object/computed';
 import Hammer from 'hammerjs';
 
 import BaseTableCell from './-private/base-table-cell';
+import ResizeHandle from './ember-th/resize-handle';
+import SortIndicator from './ember-th/sort-indicator';
 import { closest } from '../-private/utils/element';
 
 const COLUMN_INACTIVE = 0;
@@ -33,6 +35,9 @@ const COLUMN_REORDERING = 2;
   @public
 */
 export default BaseTableCell.extend({
+  EmberThResizeHandle: ResizeHandle,
+  EmberThSortIndicator: SortIndicator,
+
   tagName: 'th',
   attributeBindings: ['columnSpan:colspan', 'rowSpan:rowspan'],
   classNameBindings: ['isSortable', 'isResizable', 'isReorderable'],

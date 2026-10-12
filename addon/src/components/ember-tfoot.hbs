@@ -1,5 +1,5 @@
 {{#each this.wrappedRowArray as |rowValue|}}
-  <EmberTablePrivate::RowWrapper
+  <this.RowWrapper
     @rowValue={{rowValue}}
     @columns={{this.columns}}
     @columnMetaCache={{this.columnMetaCache}}
@@ -20,7 +20,7 @@
         row=(component (ensure-safe-component this.EmberTr) api=api)
       )}}
     {{else}}
-      <EmberTr @api={{api}} />
+      <this.EmberTr @api={{api}} />
     {{/if}}
-  </EmberTablePrivate::RowWrapper>
+  </this.RowWrapper>
 {{/each}}
