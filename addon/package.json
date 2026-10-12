@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@embroider/addon-dev": "^8.4.2",
+    "@embroider/addon-dev": "~8.2.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@tsconfig/ember": "^1.0.1",
     "@types/ember__component": "^4.0.10",
