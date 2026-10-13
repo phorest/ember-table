@@ -21,8 +21,9 @@ if [ -z "$tag" ]; then
   exit 1
 fi
 
-if [ -n "$(git status --porcelain)" ]; then
-  echo "The working tree is not clean. Commit or stash your changes first." >&2
+# Untracked files are fine: only `addon/dist` is added to the release commit
+if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+  echo "There are uncommitted changes to tracked files. Commit or stash them first." >&2
   exit 1
 fi
 
@@ -36,10 +37,10 @@ start_ref="$(git symbolic-ref -q --short HEAD || git rev-parse HEAD)"
 pnpm build:addon
 
 # Building rewrites the app-js map in addon/package.json; it must already be committed
-if [ -n "$(git status --porcelain)" ]; then
+if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
   echo "Building changed tracked files (probably the app-js map in addon/package.json)." >&2
   echo "Commit those changes first, then run this again." >&2
-  git status --short >&2
+  git status --short --untracked-files=no >&2
   exit 1
 fi
 
