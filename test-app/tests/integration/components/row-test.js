@@ -7,6 +7,7 @@ import {
 } from '../../helpers/generate-table';
 import { parameterizedComponentModule } from '../../helpers/module';
 
+import CustomRow from 'test-app/components/custom-row/component';
 import TablePage from 'ember-table/test-support/pages/ember-table';
 import { collection, hasClass } from 'ember-classy-page-object';
 
@@ -49,7 +50,7 @@ module('Integration | row', function() {
 
     test('can use a custom row component', async function(assert) {
       await generateTable(this, {
-        rowComponent: 'custom-row',
+        rowComponent: CustomRow,
       });
 
       assert.true(table.rows.objectAt(0).isCustomRow, 'Table has custom row');

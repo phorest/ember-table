@@ -98,8 +98,10 @@ module.exports = async function() {
         },
       },
       {
-        // Not run in CI for now (R20-812): yuidoc paths need updating for the un-podded,
-        // monorepo layout.
+        // Not run in CI (see ci.yml). The docs site lives in test-app/docs-app and is only
+        // built when ember-cli-addon-docs is installed, which this scenario does. The
+        // `resolutions` it used to need are root `pnpm.overrides` now, because pnpm ignores
+        // overrides in a workspace package.
         name: 'ember-default-docs',
         command: 'ember test --filter="Acceptance | docs"',
         npm: {
@@ -111,11 +113,6 @@ module.exports = async function() {
             'ember-cli-deploy-build': '^1.1.1',
             'ember-cli-deploy-git': '^1.3.3',
             'ember-cli-deploy-git-ci': '^1.0.1',
-          },
-          resolutions: {
-            '@handlebars/parser': '~2.1.0',
-            'ember-cli-addon-docs/broccoli-plugin': '4.0.7',
-            '@types/broccoli-plugin/broccoli-plugin': '4.0.7',
           },
         },
       },

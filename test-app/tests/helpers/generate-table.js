@@ -1,5 +1,6 @@
 import hbs from 'htmlbars-inline-precompile';
 import { render, settled } from '@ember/test-helpers';
+import EmberTr from 'ember-table/components/ember-tr';
 import {
   configureTableGeneration,
   generateColumns,
@@ -130,7 +131,7 @@ export function generateTableValues(
     columnCount = 10,
     columnOptions,
 
-    rowComponent = 'ember-tr',
+    rowComponent = EmberTr,
 
     ...options
   } = {}

@@ -43,7 +43,10 @@
     "overrides": {
       "@ember/test-waiters": "^3.0.2",
       "prettier": "1.18.2",
-      "testem": "^3.2.0 <3.19.0"
+      "testem": "^3.2.0 <3.19.0",
+      "ember-cli-addon-docs>@handlebars/parser": "~2.1.0",
+      "ember-cli-addon-docs>broccoli-plugin": "4.0.7",
+      "@types/broccoli-plugin>broccoli-plugin": "4.0.7"
     }
   }
 }
