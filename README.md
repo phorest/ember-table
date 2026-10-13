@@ -266,8 +266,13 @@ bring a CSS reset files into the test suite of Ember Table, meaning many
 tests would be corrupted away from the useragent styles they were written
 against.
 
+The docs site lives in `test-app/docs-app` and is merged into the test app only when
+`ember-cli-addon-docs` is installed, so the regular test app (and the `embroider-optimized`
+scenario) do not depend on it.
+
 Because of this, building the docs requires going through Ember Try. For
-example to run tests asserting the docs build:
+example to run tests asserting the docs build (this scenario is not run in CI; its second
+test currently fails inside `@html-next/vertical-collection` on the docs pages):
 
 ```
 ember try:one ember-default-docs
