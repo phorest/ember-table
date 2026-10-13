@@ -1,0 +1,1 @@
+{"version":3,"file":"ember.js","sources":["../../../src/-private/utils/ember.js"],"sourcesContent":["import { notifyPropertyChange as _notifyPropertyChange } from '@ember/object';\n\nexport const notifyPropertyChange = _notifyPropertyChange;\n"],"names":["notifyPropertyChange","_notifyPropertyChange"],"mappings":";;AAEO,MAAMA,oBAAoB,GAAGC;;"}
